@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/72 backdrop-blur-xl">
-      <nav className="section-shell flex min-h-20 items-center justify-between gap-6" aria-label="Primary navigation">
+      <nav className="section-shell flex min-h-[4.5rem] items-center justify-between gap-6" aria-label="Primary navigation">
         <a href="#home" className="focus-ring flex items-center gap-3 rounded-full">
           <span className="brand-mark">GP</span>
           <span className="font-display text-lg font-semibold tracking-tight text-white">GrowthPulse Digital</span>
@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="#audit"
-            className="focus-ring action-primary rounded-full px-5 py-3 text-sm font-semibold text-slate-950"
+            className="focus-ring action-primary rounded-full px-5 py-2.5 text-sm font-semibold text-slate-950"
           >
             Get free audit
           </a>

@@ -70,11 +70,11 @@ summary {
 }
 
 .section-space {
-  @apply py-[4.75rem] sm:py-[5.5rem] lg:py-28;
+  @apply py-10 sm:py-11 lg:py-14;
 }
 
 .eyebrow {
-  @apply inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200;
+  @apply inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-cyan-200;
 }
 
 .focus-ring {
@@ -101,7 +101,7 @@ summary {
 }
 
 .hero-stage {
-  @apply relative min-h-[28rem] overflow-hidden rounded-[2rem] border border-white/10;
+  @apply relative min-h-[24rem] overflow-hidden rounded-[1.5rem] border border-white/10;
   background:
     linear-gradient(180deg, rgba(16, 28, 43, 0.44) 0%, rgba(7, 15, 24, 0.94) 100%),
     radial-gradient(circle at 50% 40%, rgba(127, 245, 255, 0.12), transparent 24%);
@@ -112,9 +112,17 @@ summary {
   @apply grid gap-6 border-y border-white/10 py-6 sm:grid-cols-2 lg:grid-cols-4;
 }
 
+.trust-band {
+  @apply grid gap-8 rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5 sm:p-6 lg:grid-cols-[1fr_auto] lg:items-center;
+}
+
+.platform-chip {
+  @apply rounded-full border border-white/10 bg-slate-950/45 px-4 py-2 text-sm font-medium text-slate-200;
+}
+
 .media-frame {
-  @apply relative overflow-hidden rounded-[1.75rem] border border-white/10;
-  min-height: 18rem;
+  @apply relative overflow-hidden rounded-[1.5rem] border border-white/10;
+  min-height: 15rem;
   box-shadow: var(--shadow-panel);
 }
 
@@ -129,7 +137,7 @@ summary {
 }
 
 .service-panel {
-  @apply rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5;
+  @apply h-fit rounded-[1.25rem] border border-white/10 bg-white/[0.03] p-5;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
 }
 
@@ -138,7 +146,7 @@ summary {
 }
 
 .case-study-card {
-  @apply relative min-h-[28rem] overflow-hidden rounded-[2rem] border border-white/10 p-6 sm:p-7;
+  @apply relative min-h-[31rem] overflow-hidden rounded-[1.5rem] border border-white/10 p-5 sm:p-6;
   box-shadow: var(--shadow-panel);
 }
 
@@ -151,15 +159,49 @@ summary {
 }
 
 .quote-line {
-  @apply rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5;
+  @apply rounded-[1.25rem] border border-white/10 bg-white/[0.03] p-5;
+}
+
+.segment-panel {
+  @apply h-fit rounded-[1.25rem] border border-white/10 bg-white/[0.03] p-5;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+}
+
+.pricing-panel {
+  @apply relative h-fit rounded-[1.25rem] border border-white/10 bg-white/[0.03] p-5;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+}
+
+.pricing-panel-featured {
+  @apply border-cyan-300/35 bg-cyan-300/[0.06];
+}
+
+.pricing-badge {
+  @apply mb-5 inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-100;
 }
 
 .insight-panel {
-  @apply rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6;
+  @apply rounded-[1.25rem] border border-white/10 bg-white/[0.03] p-5;
 }
 
 .faq-item {
-  @apply rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5;
+  @apply rounded-[1.25rem] border border-white/10 bg-white/[0.03] p-5;
+}
+
+.form-status {
+  @apply flex items-start gap-3 rounded-2xl border px-4 py-3 text-sm leading-6;
+}
+
+.form-status-success {
+  @apply border-emerald-300/20 bg-emerald-300/10 text-emerald-100;
+}
+
+.form-status-error {
+  @apply border-orange-300/25 bg-orange-300/10 text-orange-100;
+}
+
+.mobile-cta-bar {
+  @apply fixed bottom-4 right-4 z-50 flex w-[min(15.5rem,calc(100vw-2rem))] gap-2 rounded-[1.25rem] border border-white/10 bg-slate-950/88 p-2 shadow-panel backdrop-blur-xl;
 }
 
 summary::-webkit-details-marker {
@@ -167,15 +209,25 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 1023px) {
+  body {
+    padding-bottom: 0;
+  }
+
   .hero-stage {
-    min-height: 24rem;
+    min-height: 20rem;
   }
 
   .media-frame {
-    min-height: 16rem;
+    min-height: 13rem;
   }
 
   .case-study-card {
-    min-height: 24rem;
+    min-height: 32rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .case-study-card {
+    min-height: 36rem;
   }
 }
